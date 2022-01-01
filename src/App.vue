@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <div class="text-white dark:bg-gray-200 p-10 bg-black">dsafusoidf y</div>
+  <router-view />
 </template>
 
 <style>
