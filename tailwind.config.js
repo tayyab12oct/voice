@@ -1,5 +1,6 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
+  darkMode: false,
   content: [],
   theme: {
     screens: {
@@ -11,12 +12,33 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      black: colors.black,
+      primary: "#da463a",
+      secondary: "",
+      dark: {
+        10: "rgba(0,0,0,.1)",
+        20: "rgba(0,0,0,.2)",
+        100: "#363940",
+        200: "#25272B",
+        300: "#24252A",
+        400: "#808080",
+      },
+      black: { ...colors.black, 200: "#232323" },
       white: colors.white,
-      gray: colors.gray,
+      gray: {
+        ...colors.gray,
+        50: "rgba(57,48,48,.1)",
+        100: "#F0F0F0",
+        200: "rgba(249, 249, 249, 0.7)",
+        400: "#444444",
+        900: "#9b9b9b",
+      },
+      blue: { 100: "#607ec7" },
+      green: { 50: "#46c49c", 100: "#61c436" },
+      pink: { 100: "#e54e7e" },
+      purple: { 100: "#ca85ca" },
       emerald: colors.emerald,
       indigo: colors.indigo,
-      yellow: colors.yellow,
+      yellow: { ...colors.yellow, 100: "#f4b23f" },
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],

@@ -1,12 +1,34 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div :class="isDark ? 'dark' : ''">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <div class="dark:text-white text-black dark:bg-black p-10 bg-gray-200">
+      dsafusoidf y
+    </div>
+    <button @click="mode()">
+      <span v-if="isDark === true">Dark</span>
+      <span v-if="isDark === false">Light </span> Mode
+    </button>
+    <router-view />
   </div>
-  <div class="text-white dark:bg-gray-200 p-10 bg-black">dsafusoidf y</div>
-  <router-view />
 </template>
-
+<script>
+export default {
+  datat() {
+    return {
+      isDark: true,
+    };
+  },
+  methods: {
+    mode() {
+      this.isDark = !this.isDark;
+      console.log(this.isDark, "darkmode");
+    },
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
