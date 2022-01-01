@@ -1,0 +1,12 @@
+<template>
+  <div class="bg-white">
+    <div class="max-w-6xl mx-auto py-6 flex items-center justify-between">
+      <router-link to="/">
+        <img alt="Vue logo" class="w-36" src="../assets/logo.png" />
+      </router-link>
+      <router-link to="/">
+        <img class="" alt="Vue logo" src="../assets/voice_banner.png" />
+      </router-link>
+    </div>
+  </div>
+</template>

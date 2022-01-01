@@ -1,21 +1,27 @@
 <template>
-  <div :class="isDark ? 'dark' : ''">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div :class="isDark ? 'dark' : 'bg-gray-100'">
+    <TopBar />
+    <Header />
+    <div class="max-w-6xl mx-auto">
+      <router-view />
     </div>
-    <div class="dark:text-white text-black dark:bg-black p-10 bg-gray-200">
-      dsafusoidf y
-    </div>
-    <button @click="mode()">
-      <span v-if="isDark === true">Dark</span>
-      <span v-if="isDark === false">Light </span> Mode
-    </button>
-    <router-view />
+    <Footer />
   </div>
 </template>
 <script>
+// <div id="nav">
+//   <router-link to="/">Home</router-link> |
+//   <router-link to="/about">About</router-link>
+// </div>
+import TopBar from "./components/TopBar.vue";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 export default {
+  components: {
+    TopBar,
+    Header,
+    Footer,
+  },
   datat() {
     return {
       isDark: true,
