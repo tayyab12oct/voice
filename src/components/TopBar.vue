@@ -1,6 +1,8 @@
 <template>
-  <div class="bg-primary">
-    <div class="max-w-6xl py-2.5 mx-auto flex items-center justify-between">
+  <div class="bg-primary hidden lg:flex w-full">
+    <div
+      class="max-w-6xl w-full px-4 xl:px-0 py-2.5 mx-auto flex items-center justify-between"
+    >
       <div class="flex items-center space-x-2 text-white text-sm">
         <router-link class="hover:underline" to="/">Layouts </router-link>
         <router-link class="hover:underline" to="/">Typography </router-link>

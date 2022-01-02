@@ -2,7 +2,13 @@
   <div :class="isDark ? 'dark' : 'bg-gray-100'">
     <TopBar />
     <Header />
-    <div class="max-w-6xl mx-auto">
+    <button
+      class="px-4 text-dark-100 focus:outline-none md:hidden"
+      @click="showSidebarOpen"
+    >
+      Open sidebar
+    </button>
+    <div class="max-w-6xl w-full px-4 xl:px-0 mx-auto">
       <router-view />
     </div>
     <Footer />
@@ -25,6 +31,7 @@ export default {
   datat() {
     return {
       isDark: true,
+      sidebarOpen: false,
     };
   },
   methods: {
@@ -32,18 +39,13 @@ export default {
       this.isDark = !this.isDark;
       console.log(this.isDark, "darkmode");
     },
+    showSidebarOpen() {
+      this.sidebarOpen = !this.sidebarOpen;
+    },
   },
 };
 </script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 #nav {
   padding: 30px;
 }
