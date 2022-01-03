@@ -2,6 +2,7 @@
   <div :class="isDark ? 'dark' : 'bg-gray-100'">
     <TopBar />
     <Header />
+    <!-- <Drawer :sidebarOpen="sidebarOpen" @closeSidebar="showSidebarOpen" /> -->
     <button
       class="px-4 text-dark-100 focus:outline-none md:hidden"
       @click="showSidebarOpen"
@@ -22,11 +23,13 @@
 import TopBar from "./components/TopBar.vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+// import Drawer from "./components/Drawer/index.vue";
 export default {
   components: {
     TopBar,
     Header,
     Footer,
+    // Drawer,
   },
   datat() {
     return {
