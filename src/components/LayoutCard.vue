@@ -50,7 +50,7 @@
           >
           <p
             :class="captionClass"
-            class="text-gray-900 md:text-sm text-xs font-light pt-1 pb-2"
+            class="md:text-sm text-xs font-light pt-1 pb-2"
           >
             {{ v.caption }}
           </p>
@@ -89,7 +89,9 @@
           :key="v"
           class="text-sm font-poppin text-primary font-semibold"
         >
-          <span class="text-dark-600"> {{ v.title }}</span>
+          <router-link to="" class="text-dark-600 hover:text-primary">
+            {{ v.title }}</router-link
+          >
         </li>
       </ul>
     </div>
@@ -117,9 +119,9 @@ export default {
       type: String,
       default: "Latest Article",
     },
-    // category: {
+    // categoryClass: {
     //   type: String,
-    //   default: "Environment",
+    //   default: "",
     // },
     gridClass: {
       type: String,
@@ -147,7 +149,7 @@ export default {
     },
     captionClass: {
       type: String,
-      default: "",
+      default: "text-gray-900",
     },
     descClass: {
       type: String,
