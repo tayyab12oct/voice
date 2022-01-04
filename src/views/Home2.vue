@@ -57,21 +57,21 @@
           :list="listG"
           title="LAYOUT G"
           mainClass="border-blue-100"
-          gridClass="grid grid-cols-1"
+          gridClass="grid grid-cols-1 p-3 md:p-0"
           textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 pt-5"
           cardMainClass="relative"
-          titleClass="text-white font-medium tracking-wide text-2xl font-poppin hover:text-white"
-          captionClass="text-white"
-          imgClass="h-110 w-full"
+          titleClass="text-white font-medium tracking-wide md:text-2xl text-lg pb-2 md:pb-0 pt-1 font-poppin hover:text-white"
+          captionClass="text-white hidden md:flex"
+          imgClass="md:h-110 h-64 w-full"
         />
         <LayoutCard
           :list="listH"
           title="LAYOUT H"
           mainClass="border-primary"
-          gridClass="grid grid-cols-2 p-3 md:p-5 gap-3 md:gap-5"
+          gridClass="grid md:grid-cols-2 grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
           textMainClass="absolute top-0 left-0 h-full bg-dark-60 w-full z-20 flex justify-center cursor-pointer items-center text-center p-2 pt-5"
           cardMainClass="relative"
-          titleClass="text-white font-medium text-xl md:w-3/4 px-4 tracking-wide pt-1.5 font-poppin hover:text-white"
+          titleClass="text-white font-medium md:text-xl text-lg w-3/4 md:px-4 px-2 tracking-wide pt-1.5 font-poppin hover:text-white"
           imgClass="h-64 w-full"
         />
         <LayoutCard
@@ -85,11 +85,11 @@
           title="CATEGORIES MODULE - 1 COLUMN"
           mainClass="border-primary"
           gridClass="grid grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
-          textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 pt-5"
+          textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 md:pt-5 pt-3"
           cardMainClass="relative"
-          titleClass="text-white font-medium tracking-wide text-2xl font-poppin hover:text-white"
+          titleClass="text-white font-medium tracking-wide md:text-2xl text-lg font-poppin hover:text-white"
           captionClass="text-white"
-          imgClass="h-110 w-full"
+          imgClass="md:h-110 h-56 w-full"
         />
       </div>
       <div class="lg:w-3/12 md:w-5/12 mx-auto w-full pt-6 lg:pt-0">

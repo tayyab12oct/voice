@@ -28,9 +28,9 @@
           </div>
           <div
             v-if="v.icon === true"
-            class="bg-gray-80 rounded-full p-4 border-4 border-white cursor-pointer"
+            class="bg-gray-80 rounded-full md:p-4 p-2 md:border-4 border-2 border-white cursor-pointer"
           >
-            <MusicNoteIcon class="w-9 text-white" />
+            <MusicNoteIcon :class="v.iconClass" class="md:w-9 w-5 text-white" />
           </div>
         </div>
         <div :class="textMainClass" class="flex flex-col font-sans">
