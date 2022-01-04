@@ -103,13 +103,35 @@
       imgClass="h-20 w-46"
       titleClass="md:text-sm text-xs h-16 overflow-hidden"
     />
+    <LayoutCard
+      :list="points"
+      title="Highest Points"
+      mainClass="border-transparent"
+      gridClass="md:p-5 p-3 md:gap-5 gap-3 grid-cols-1"
+      textMainClass="w-full"
+      cardMainClass="flex items-center shadow-none bg-dark-900 space-x-3"
+      imgClass="w-18 h-14 md:h-14 md:w-20 lg:h-18 lg:w-28 flex items-center justify-center"
+      titleClass="md:text-sm text-xs"
+      img="w-full h-full rounded-full"
+    />
+    <Login />
+    <!-- <div class="bg-dark-900 shadow">
+      <h1
+        class="bg-white p-3 py-3 shadow text-center uppercase text-dark-600 font-semibold font-poppin"
+      >
+        Highest Points
+      </h1>
+      <div class=""></div>
+    </div> -->
   </div>
 </template>
 <script>
 import LayoutCard from "./LayoutCard.vue";
+import Login from "./Login.vue";
 export default {
   components: {
     LayoutCard,
+    Login,
   },
   data() {
     return {
@@ -131,6 +153,23 @@ export default {
           category: "Lifestyle",
           color: "text-yellow-100",
           title: "Entrepreneurship ideas for young and ambitious people",
+        },
+      ],
+      points: [
+        {
+          src: "https://mksdmcdn-9b59.kxcdn.com/voice/wp-content/uploads/2020/06/voice3_41-1536x1020.jpg.webp",
+          title: "admin",
+          caption: "12 points",
+        },
+        {
+          src: "https://mksdmcdn-9b59.kxcdn.com/voice/wp-content/uploads/2020/06/voice3_30-1536x1017.jpg.webp",
+          title: "admin",
+          caption: "12 points",
+        },
+        {
+          src: "https://mksdmcdn-9b59.kxcdn.com/voice/wp-content/uploads/2020/06/voice3_38-1536x1024.jpg.webp",
+          title: "admin",
+          caption: "12 points",
         },
       ],
     };

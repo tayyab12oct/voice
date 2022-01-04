@@ -8,7 +8,7 @@
     <div :class="gridClass" class="grid">
       <div
         :class="cardMainClass"
-        class="bg-white shadow w-full"
+        class="shadow w-full"
         v-for="v in list"
         :key="v"
       >
@@ -22,7 +22,8 @@
           >
             <img
               :src="v.src"
-              class="w-full h-full transform transition duration-500 hover:scale-110 cursor-pointer"
+              :class="img"
+              class="transform transition duration-500 cursor-pointer"
               alt=""
             />
           </div>
@@ -129,7 +130,7 @@ export default {
     },
     cardMainClass: {
       type: String,
-      default: "",
+      default: "bg-white",
     },
     titleClass: {
       type: String,
@@ -142,6 +143,10 @@ export default {
     color: {
       type: String,
       default: "text-purple-100",
+    },
+    img: {
+      type: String,
+      default: "w-full h-full hover:scale-110",
     },
     imgClass: {
       type: String,
