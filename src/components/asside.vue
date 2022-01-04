@@ -114,24 +114,16 @@
       titleClass="md:text-sm text-xs"
       img="w-full h-full rounded-full"
     />
-    <!-- <Login /> -->
-    <!-- <div class="bg-dark-900 shadow">
-      <h1
-        class="bg-white p-3 py-3 shadow text-center uppercase text-dark-600 font-semibold font-poppin"
-      >
-        Highest Points
-      </h1>
-      <div class=""></div>
-    </div> -->
+    <Login />
   </div>
 </template>
 <script>
 import LayoutCard from "./LayoutCard.vue";
-// import Login from "./Login.vue";
+import Login from "./Login.vue";
 export default {
   components: {
     LayoutCard,
-    // Login,
+    Login,
   },
   data() {
     return {

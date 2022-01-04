@@ -1,106 +1,95 @@
 <template>
-  <div class="max-w-6xl mx-auto">
-    <div class="flex justify-between pt-8 flex-wrap">
-      <div class="lg:w-9/12 lg:pr-8 w-full space-y-6">
-        <LayoutCard
-          :list="listA"
-          title="LAYOUT A"
-          mainClass="border-purple-100"
-          gridClass=""
-          imgClass="md:h-120 h-48"
-          titleClass="md:text-3xl text-lg md:leading-wide md:w-3/4 md:pb-2"
-          captionClass="text-gray-900 mb-2"
-          descClass="md:text-base text-sm md:w-4/5 pb-3"
-        />
-        <LayoutCard
-          :list="listB"
-          title="LAYOUT B"
-          mainClass="border-pink-100"
-          gridClass="md:p-5 p-3 md:gap-5 gap-3"
-          textMainClass="py-4 lg:pr-8 lg:pl-0 text-center md:text-left px-6"
-          cardMainClass="bg-white grid md:grid-cols-2 grid-cols-1 md:gap-5"
-          imgClass="md:h-48 h-42"
-          titleClass="mg:text-2xl text-base font-semibold"
-          captionClass="text-gray-900 md:mb-2"
-        />
-        <LayoutCard
-          :list="listC"
-          title="LAYOUT C"
-          mainClass="border-green-100"
-        />
-        <LayoutCard
-          :list="listD"
-          title="LAYOUT D"
-          mainClass="border-yellow-100"
-          gridClass="md:p-5 p-3 md:gap-5 gap-3 md:grid-cols-2 grid-cols-1"
-          textMainClass="pt-1 border w-full"
-          cardMainClass="bg-white flex items-start space-x-3 md:pr-5 md:h-24 h-20"
-          imgClass="h-full md:w-72 w-46"
-          titleClass="md:text-sm text-xs md:leading-5 h-16 overflow-hidden"
-        />
-        <LayoutCard
-          :list="listE"
-          title="LAYOUT E"
-          mainClass="border-green-50"
-          gridClass="md:p-5 p-3 md:gap-5 gap-3 lg:grid-cols-5 grid-cols-2 md:grid-cols-4"
-          textMainClass="pt-1 border w-full"
-          imgClass="h-24 w-full"
-          titleClass="text-xs px-4 text-center"
-        />
-        <LayoutCard
-          title="LAYOUT F"
-          :list="list"
-          gridClass="hidden"
-          listMainClass=""
-        />
-        <LayoutCard
-          :list="listG"
-          title="LAYOUT G"
-          mainClass="border-blue-100"
-          gridClass="grid grid-cols-1 p-3 md:p-0"
-          textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 pt-5"
-          cardMainClass="bg-white relative"
-          titleClass="text-white font-medium tracking-wide md:text-2xl text-lg pb-2 md:pb-0 pt-1 font-poppin hover:text-white"
-          captionClass="text-white hidden md:flex"
-          imgClass="md:h-110 h-64 w-full"
-        />
-        <LayoutCard
-          :list="listH"
-          title="LAYOUT H"
-          mainClass="border-primary"
-          gridClass="grid md:grid-cols-2 grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
-          textMainClass="absolute top-0 left-0 h-full bg-dark-60 w-full z-20 flex justify-center cursor-pointer items-center text-center p-2 pt-5"
-          cardMainClass="bg-white relative"
-          titleClass="text-white font-medium md:text-xl text-lg w-3/4 md:px-4 px-2 tracking-wide pt-1.5 font-poppin hover:text-white"
-          imgClass="h-64 w-full"
-        />
-        <LayoutCard
-          :list="Coulumn_2"
-          title="CATEGORIES MODULE - 2 COLUMNS"
-          mainClass="border-primary"
-          textMainClass="items-center text-center p-2 lg:px-8"
-        />
-        <LayoutCard
-          :list="Coulumn_1"
-          title="CATEGORIES MODULE - 1 COLUMN"
-          mainClass="border-primary"
-          gridClass="grid grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
-          textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 md:pt-5 pt-3"
-          cardMainClass="bg-white relative"
-          titleClass="text-white font-medium tracking-wide md:text-2xl text-lg font-poppin hover:text-white"
-          captionClass="text-white"
-          imgClass="md:h-110 h-56 w-full"
-        />
-      </div>
-      <div class="lg:w-3/12 md:w-5/12 mx-auto w-full pt-6 lg:pt-0">
-        <Asside />
-      </div>
+  <div class="flex justify-between pt-8 flex-wrap">
+    <div class="lg:w-9/12 lg:pr-8 w-full space-y-6">
+      <LayoutCard
+        :list="listA"
+        title="LAYOUT A"
+        mainClass="border-purple-100"
+        gridClass=""
+        imgClass="md:h-120 h-48"
+        titleClass="md:text-3xl text-lg md:leading-wide md:w-3/4 md:pb-2"
+        captionClass="text-gray-900 mb-2"
+        descClass="md:text-base text-sm md:w-4/5 pb-3"
+      />
+      <LayoutCard
+        :list="listB"
+        title="LAYOUT B"
+        mainClass="border-pink-100"
+        gridClass="md:p-5 p-3 md:gap-5 gap-3"
+        textMainClass="py-4 lg:pr-8 lg:pl-0 text-center md:text-left px-6"
+        cardMainClass="bg-white grid md:grid-cols-2 grid-cols-1 md:gap-5"
+        imgClass="md:h-48 h-42"
+        titleClass="mg:text-2xl text-base font-semibold"
+        captionClass="text-gray-900 md:mb-2"
+      />
+      <LayoutCard :list="listC" title="LAYOUT C" mainClass="border-green-100" />
+      <LayoutCard
+        :list="listD"
+        title="LAYOUT D"
+        mainClass="border-yellow-100"
+        gridClass="md:p-5 p-3 md:gap-5 gap-3 md:grid-cols-2 grid-cols-1"
+        textMainClass="pt-1 border w-full"
+        cardMainClass="bg-white flex items-start space-x-3 md:pr-5 md:h-24 h-20"
+        imgClass="h-full md:w-72 w-46"
+        titleClass="md:text-sm text-xs md:leading-5 h-16 overflow-hidden"
+      />
+      <LayoutCard
+        :list="listE"
+        title="LAYOUT E"
+        mainClass="border-green-50"
+        gridClass="md:p-5 p-3 md:gap-5 gap-3 lg:grid-cols-5 grid-cols-2 md:grid-cols-4"
+        textMainClass="pt-1 border w-full"
+        imgClass="h-24 w-full"
+        titleClass="text-xs px-4 text-center"
+      />
+      <LayoutCard
+        title="LAYOUT F"
+        :list="list"
+        gridClass="hidden"
+        listMainClass=""
+      />
+      <LayoutCard
+        :list="listG"
+        title="LAYOUT G"
+        mainClass="border-blue-100"
+        gridClass="grid grid-cols-1 p-3 md:p-0"
+        textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 pt-5"
+        cardMainClass="bg-white relative"
+        titleClass="text-white font-medium tracking-wide md:text-2xl text-lg pb-2 md:pb-0 pt-1 font-poppin hover:text-white"
+        captionClass="text-white hidden md:flex"
+        imgClass="md:h-110 h-64 w-full"
+      />
+      <LayoutCard
+        :list="listH"
+        title="LAYOUT H"
+        mainClass="border-primary"
+        gridClass="grid md:grid-cols-2 grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
+        textMainClass="absolute top-0 left-0 h-full bg-dark-60 w-full z-20 flex justify-center cursor-pointer items-center text-center p-2 pt-5"
+        cardMainClass="bg-white relative"
+        titleClass="text-white font-medium md:text-xl text-lg w-3/4 md:px-4 px-2 tracking-wide pt-1.5 font-poppin hover:text-white"
+        imgClass="h-64 w-full"
+      />
+      <LayoutCard
+        :list="Coulumn_2"
+        title="CATEGORIES MODULE - 2 COLUMNS"
+        mainClass="border-primary"
+        textMainClass="items-center text-center p-2 lg:px-8"
+      />
+      <LayoutCard
+        :list="Coulumn_1"
+        title="CATEGORIES MODULE - 1 COLUMN"
+        mainClass="border-primary"
+        gridClass="grid grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
+        textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 md:pt-5 pt-3"
+        cardMainClass="bg-white relative"
+        titleClass="text-white font-medium tracking-wide md:text-2xl text-lg font-poppin hover:text-white"
+        captionClass="text-white"
+        imgClass="md:h-110 h-56 w-full"
+      />
     </div>
-    <img
-      class="mx-auto my-8"
-      alt="banner"
-      src="../assets/voice_banner_dark.png"
-    />
+    <div class="lg:w-3/12 md:w-5/12 mx-auto w-full pt-6 lg:pt-0">
+      <Asside />
+    </div>
   </div>
 </template>
 

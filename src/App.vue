@@ -4,12 +4,12 @@
     <Header />
     <!-- <Drawer :sidebarOpen="sidebarOpen" @closeSidebar="showSidebarOpen" /> -->
     <button
-      class="px-4 text-dark-100 focus:outline-none md:hidden"
+      class="px-4 text-dark-100 focus:outline-none hidden"
       @click="showSidebarOpen"
     >
       Open sidebar
     </button>
-    <div class="max-w-6xl w-full px-4 xl:px-0 mx-auto">
+    <div class="max-w-6xl w-full md:px-4 px-2.5 xl:px-0 mx-auto">
       <router-view />
     </div>
     <Footer />

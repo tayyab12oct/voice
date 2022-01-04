@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-6xl mx-auto">
+  <div>
     <div class="flex justify-between pt-8 flex-wrap">
       <div class="lg:w-9/12 lg:pr-8 w-full">
         <LayoutCard :list="list" buttonMainClass="" />
