@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-dark-900 shadow">
+  <div class="bg-light-900 dark:bg-dark-500 shadow">
     <h1
-      class="bg-white p-3 py-3 shadow text-center uppercase text-dark-600 font-semibold font-poppin"
+      class="bg-white dark:bg-dark-200 p-3 py-3 shadow text-center uppercase text-dark-600 dark:text-white font-semibold font-poppin"
     >
       ABOUT THE AUTHOR
     </h1>
@@ -15,11 +15,13 @@
           alt=""
         />
         <div class="pt-1">
-          <h2 class="font-poppin text-dark-600 font-semibold text-2xl">
+          <h2
+            class="font-poppin text-dark-600 dark:text-white font-semibold text-2xl"
+          >
             Patrick Callahan
           </h2>
           <p
-            class="text-gray-400 font-sans font-light md:text-base text-sm py-2.5"
+            class="text-gray-400 dark:text-gray-200 font-sans font-light md:text-base text-sm py-2.5"
           >
             Wayfarers plaid pour-over, actually direct trade McSweeney's
             Portland Thundercats shabby chic drinking vinegar seitan trust fund
@@ -30,7 +32,7 @@
       </div>
     </div>
     <div
-      class="flex items-center justify-between py-3 px-5 bg-dark-800 border-t border-dark-50"
+      class="flex items-center justify-between py-3 px-5 bg-light-800 dark:bg-dark-800 border-t border-dark-50"
     >
       <router-link
         to="/"

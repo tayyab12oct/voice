@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-dark-100">
+  <div class="bg-dark-100 border-t border-dark-60">
     <div
       class="max-w-6xl w-full px-4 xl:px-0 mx-auto py-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 items-start justify-between"
     >

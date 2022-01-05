@@ -29,7 +29,9 @@
           alt=""
         /> -->
       <div class="lg:pl-22">
-        <p class="text-gray-400 font-light md:text-base text-sm md:pb-6 pb-3">
+        <p
+          class="text-gray-400 dark:text-gray-200 font-light md:text-base text-sm md:pb-6 pb-3"
+        >
           I couldn’t agree more with you Patrick! Thanks for sharing this
           brilliant article!
         </p>
@@ -44,6 +46,7 @@
     <transition name="fade">
       <div class="py-4" v-if="reply === true">
         <LeaveComment
+          titleClass="dark:bg-dark-800"
           title="Reply to Lisa Scholfield"
           icon="flex"
           :click="onHandle"

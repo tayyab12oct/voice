@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex justify-between pt-8 flex-wrap">
+    <div class="flex justify-between flex-wrap">
       <div class="lg:w-9/12 lg:pr-8 w-full">
         <LayoutCard :list="list" buttonMainClass="" />
       </div>
@@ -9,7 +9,7 @@
       </div>
     </div>
     <img
-      class="mx-auto my-8"
+      class="mx-auto mt-8"
       alt="banner"
       src="../assets/voice_banner_dark.png"
     />

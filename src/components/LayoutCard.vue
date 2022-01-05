@@ -1,7 +1,10 @@
 <template>
-  <div :class="mainClass" class="border-t-2 bg-dark-900 shadow">
+  <div
+    :class="mainClass"
+    class="border-t-2 bg-light-900 dark:bg-dark-500 shadow"
+  >
     <h1
-      class="bg-white p-3 py-3 shadow text-center uppercase text-dark-600 font-semibold font-poppin"
+      class="bg-white dark:bg-dark-200 p-3 py-3 shadow text-center uppercase text-dark-600 dark:text-white font-semibold font-poppin"
     >
       {{ title }}
     </h1>
@@ -45,7 +48,7 @@
           <router-link
             :class="titleClass"
             to=""
-            class="text-dark-600 font-medium hover:text-primary font-poppin transform transition-all"
+            class="text-dark-600 dark:text-white font-medium hover:text-primary font-poppin transform transition-all"
           >
             {{ v.title }}</router-link
           >
@@ -57,7 +60,7 @@
           </p>
           <p
             :class="descClass"
-            class="text-gray-400 font-light leading-6 px-0.5"
+            class="text-gray-400 dark:text-gray-200 font-light leading-6 px-0.5"
           >
             {{ v.desc }}
           </p>
@@ -90,7 +93,10 @@
           :key="v"
           class="text-sm font-poppin text-primary font-semibold"
         >
-          <router-link to="" class="text-dark-600 hover:text-primary">
+          <router-link
+            to=""
+            class="text-dark-600 dark:text-white hover:text-primary"
+          >
             {{ v.title }}</router-link
           >
         </li>
@@ -98,7 +104,7 @@
     </div>
     <div
       :class="buttonMainClass"
-      class="flex justify-center py-3 bg-dark-800 border-t border-dark-50"
+      class="flex justify-center py-3 bg-light-800 dark:bg-dark-800 border-t border-dark-50"
     >
       <button
         class="bg-primary rounded text-sm text-white font-sans font-light px-8 py-1.5"
@@ -130,7 +136,7 @@ export default {
     },
     cardMainClass: {
       type: String,
-      default: "bg-white",
+      default: "bg-white dark:bg-dark-200",
     },
     titleClass: {
       type: String,

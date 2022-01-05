@@ -1,8 +1,9 @@
 <template>
-  <div class="bg-dark-900 shadow">
+  <div class="bg-light-900 dark:bg-dark-500 shadow">
     <div class="relative">
       <h1
-        class="bg-white p-3 py-3 shadow text-center text-dark-600 font-semibold font-poppin w-full"
+        :class="titleClass"
+        class="bg-white p-3 py-3 shadow text-center text-dark-600 dark:text-white font-semibold font-poppin w-full"
       >
         {{ title }}
       </h1>
@@ -19,7 +20,7 @@
         <div class="md:col-span-3">
           <label
             for="comment"
-            class="block font-sans font-light md:text-base text-md text-gray-400"
+            class="block font-sans font-light md:text-base text-md text-gray-400 dark:text-gray-200"
             >Comment</label
           >
           <div class="mt-1.5">
@@ -27,49 +28,49 @@
               rows="5"
               name="comment"
               id="comment"
-              class="border bg-transparent placeholder-gray-400 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+              class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
             />
           </div>
         </div>
         <div>
           <label
             for="name"
-            class="block font-sans font-light md:text-base text-md text-gray-400"
+            class="block font-sans font-light md:text-base text-md text-gray-400 dark:text-gray-200"
             >Name <span class="text-primary">*</span></label
           >
           <div class="mt-1.5">
             <input
               name="name"
               id="name"
-              class="border bg-transparent placeholder-gray-400 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+              class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
             />
           </div>
         </div>
         <div>
           <label
             for="email"
-            class="block font-sans font-light md:text-base text-md text-gray-400"
+            class="block font-sans font-light md:text-base text-md text-gray-400 dark:text-gray-200"
             >Email <span class="text-primary">*</span></label
           >
           <div class="mt-1.5">
             <input
               name="email"
               id="email"
-              class="border bg-transparent placeholder-gray-400 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+              class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
             />
           </div>
         </div>
         <div>
           <label
             for="url"
-            class="block font-sans font-light md:text-base text-md text-gray-400"
+            class="block font-sans font-light md:text-base text-md text-gray-400 dark:text-gray-200"
             >Website</label
           >
           <div class="mt-1.5">
             <input
               name="url"
               id="url"
-              class="border bg-transparent placeholder-gray-400 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+              class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
             />
           </div>
         </div>
@@ -87,7 +88,7 @@
         <div class="ml-2">
           <label
             for="comments"
-            class="font-sans font-light text-md text-gray-400 cursor-pointer"
+            class="font-sans font-light text-md text-gray-400 dark:text-gray-200 cursor-pointer"
             >Save my name, email, and website in this browser for the next time
             I comment.</label
           >
@@ -106,6 +107,10 @@
 export default {
   components: {},
   props: {
+    titleClass: {
+      type: String,
+      default: "dark:bg-dark-200",
+    },
     title: {
       type: String,
       default: "Leave a Comment",

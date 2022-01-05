@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-between py-8 flex-wrap">
+  <div class="flex justify-between flex-wrap">
     <div class="lg:w-9/12 lg:pr-8 w-full space-y-7">
       <div
-        class="bg-white shadow flex flex-col font-sans pt-9 items-center text-center"
+        class="bg-white dark:bg-dark-200 shadow flex flex-col font-sans pt-9 items-center text-center"
       >
         <router-link
           to=""
@@ -12,7 +12,7 @@
         >
         <router-link
           to=""
-          class="text-dark-600 pb-2 pt-1 md:px-2 px-7 md:text-4xl text-2xl font-semibold md:leading-wide hover:text-primary font-poppin transform transition-all"
+          class="text-dark-600 dark:text-white pb-2 pt-1 md:px-2 px-7 md:text-4xl text-2xl font-semibold md:leading-wide hover:text-primary font-poppin transform transition-all"
         >
           The Features of the Best Ergonomic Keyboard</router-link
         >
@@ -39,13 +39,13 @@
         </div>
         <div class="md:p-8 p-5 text-left max-w-2xl">
           <h2
-            class="text-gray-400 font-semibold font-poppin md:text-lg text-base pb-4"
+            class="text-gray-400 dark:text-gray-200 font-semibold font-poppin md:text-lg text-base pb-4"
           >
             Flexitarian Cosby sweater artisan yr, banjo 90’s listicle butcher
             raw denim normcore shabby chic pug swag mustache.
           </h2>
           <p
-            class="text-gray-400 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
+            class="text-gray-400 dark:text-gray-200 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
           >
             Brooklyn Carles squid single-origin coffee YOLO, Cosby sweater deep
             v mumblecore High Life. Letterpress keffiyeh hoodie, squid taxidermy
@@ -60,7 +60,7 @@
             fingerstache shabby chic authentic master cleanse.
           </p>
           <p
-            class="text-gray-400 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
+            class="text-gray-400 dark:text-gray-200 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
           >
             Shoreditch you probably haven’t heard of them kitsch hoodie.
             Whatever ugh brunch pickled four loko. Typewriter trust fund street
@@ -73,7 +73,7 @@
             quinoa raw denim single-origin coffee disrupt.
           </p>
           <p
-            class="text-gray-400 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
+            class="text-gray-400 dark:text-gray-200 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
           >
             Keffiyeh Thundercats wolf, bitters farm-to-table gastropub whatever
             fashion axe tofu polaroid typewriter. Pour-over four loko American
@@ -88,7 +88,7 @@
             8-bit occupy aesthetic chillwave tote bag fashion axe.
           </p>
           <p
-            class="text-gray-400 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
+            class="text-gray-400 dark:text-gray-200 md:font-normal font-light text-sm md:leading-7 leading-6 traking-tighter py-4"
           >
             Tattooed Kickstarter bitters lomo raw denim. Godard 8-bit
             farm-to-table, flexitarian salvia banh mi narwhal disrupt Echo Park
@@ -115,7 +115,7 @@
           </div>
         </div>
         <div
-          class="bg-dark-900 border-t border-dark-50 md:p-6 p-5 w-full grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-3"
+          class="bg-light-900 dark:bg-dark-500 border-t border-dark-50 md:p-6 p-5 w-full grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-3"
         >
           <div class="group">
             <div
@@ -140,7 +140,7 @@
             <div class="flex flex-col font-sans">
               <router-link
                 to=""
-                class="text-dark-600 text-lg md:px-12 px-4 pt-2 text-center font-medium group-hover:text-primary font-poppin transform transition-all"
+                class="text-dark-600 dark:text-white text-lg md:px-12 px-4 pt-2 text-center font-medium group-hover:text-primary font-poppin transform transition-all"
               >
                 The Ultimate Cheat Sheet On Ecology</router-link
               >
@@ -169,7 +169,7 @@
             <div class="flex flex-col font-sans">
               <router-link
                 to=""
-                class="text-dark-600 text-lg md:px-12 px-4 pt-2 text-center font-medium group-hover:text-primary font-poppin transform transition-all"
+                class="text-dark-600 dark:text-white text-lg md:px-12 px-4 pt-2 text-center font-medium group-hover:text-primary font-poppin transform transition-all"
               >
                 Entrepreneurship ideas for young and ambitious
                 people</router-link
@@ -183,8 +183,8 @@
         title="YOU MAY ALSO LIKE"
         mainClass="border-transparent"
         gridClass="md:p-5 p-3 md:gap-5 gap-3 md:grid-cols-2 grid-cols-1"
-        textMainClass="pt-1 border w-full"
-        cardMainClass="bg-white flex items-start space-x-3 md:pr-5 md:h-26 h-20"
+        textMainClass="pt-1 w-full"
+        cardMainClass="bg-white dark:bg-dark-200 flex items-start space-x-3 md:pr-5 md:h-26 h-20"
         imgClass="h-full md:w-72 w-46"
         titleClass="md:text-sm text-xs md:leading-5 h-16 pr-3 overflow-hidden"
       />

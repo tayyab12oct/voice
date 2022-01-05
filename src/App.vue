@@ -1,5 +1,5 @@
 <template>
-  <div :class="isDark ? 'dark' : 'bg-gray-100'">
+  <div :class="isDark ? 'dark' : 'bg-gray-100 dark:bg-dark-100'">
     <TopBar />
     <Header />
     <!-- <Drawer :sidebarOpen="sidebarOpen" @closeSidebar="showSidebarOpen" /> -->
@@ -9,7 +9,7 @@
     >
       Open sidebar
     </button>
-    <div class="max-w-6xl w-full md:px-4 px-2.5 xl:px-0 mx-auto">
+    <div class="max-w-6xl w-full py-8 md:px-4 px-2.5 xl:px-0 mx-auto">
       <router-view />
     </div>
     <Footer />

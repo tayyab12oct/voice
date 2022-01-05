@@ -1,8 +1,8 @@
 <template>
   <div class="space-y-6">
-    <div class="bg-dark-900 shadow">
+    <div class="bg-light-900 dark:bg-dark-900 shadow">
       <h1
-        class="bg-white p-3 py-3 shadow text-center uppercase text-dark-600 font-semibold font-poppin"
+        class="bg-white dark:bg-dark-200 p-3 py-3 shadow text-center uppercase text-dark-600 dark:text-white font-semibold font-poppin"
       >
         CATEGORIES
       </h1>
@@ -11,7 +11,7 @@
           class="flex font-sans category_color color_purple border-l-2 border-purple-100 font-light cursor-pointer group"
         >
           <h1
-            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 group-hover:text-white"
+            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 dark:text-gray-200 group-hover:text-white"
           >
             Environment
           </h1>
@@ -25,7 +25,7 @@
           class="flex font-sans category_color color_pink border-l-2 border-pink-100 font-light cursor-pointer group"
         >
           <h1
-            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 group-hover:text-white"
+            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 dark:text-gray-200 group-hover:text-white"
           >
             Fashion
           </h1>
@@ -39,7 +39,7 @@
           class="flex font-sans category_color color_green border-l-2 border-green-100 font-light cursor-pointer group"
         >
           <h1
-            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 group-hover:text-white"
+            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 dark:text-gray-200 group-hover:text-white"
           >
             Food
           </h1>
@@ -53,7 +53,7 @@
           class="flex font-sans category_color color_primary border-l-2 border-primary font-light cursor-pointer group"
         >
           <h1
-            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 group-hover:text-white"
+            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 dark:text-gray-200 group-hover:text-white"
           >
             Lifestyle
           </h1>
@@ -67,7 +67,7 @@
           class="flex font-sans category_color color_green border-l-2 border-green-50 font-light cursor-pointer group"
         >
           <h1
-            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 group-hover:text-white"
+            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 dark:text-gray-200 group-hover:text-white"
           >
             Music
           </h1>
@@ -81,7 +81,7 @@
           class="flex font-sans category_color color_blue border-l-2 border-blue-100 font-light cursor-pointer group"
         >
           <h1
-            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 group-hover:text-white"
+            class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 dark:text-gray-200 group-hover:text-white"
           >
             Technology
           </h1>
@@ -109,7 +109,7 @@
       mainClass="border-transparent"
       gridClass="md:p-5 p-3 md:gap-5 gap-3 grid-cols-1"
       textMainClass="w-full"
-      cardMainClass="flex items-center shadow-none bg-dark-900 space-x-3"
+      cardMainClass="flex items-center shadow-none bg-light-900 dark:bg-dark-500 space-x-3"
       imgClass="w-18 h-14 md:h-14 md:w-20 lg:h-18 lg:w-28 flex items-center justify-center"
       titleClass="md:text-sm text-xs"
       img="w-full h-full rounded-full"

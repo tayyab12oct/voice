@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between pt-8 flex-wrap">
+  <div class="flex justify-between flex-wrap">
     <div class="lg:w-9/12 lg:pr-8 w-full space-y-6">
       <LayoutCard
         :list="listA"
@@ -17,7 +17,7 @@
         mainClass="border-pink-100"
         gridClass="md:p-5 p-3 md:gap-5 gap-3"
         textMainClass="py-4 lg:pr-8 lg:pl-0 text-center md:text-left px-6"
-        cardMainClass="bg-white grid md:grid-cols-2 grid-cols-1 md:gap-5"
+        cardMainClass="bg-white dark:bg-dark-200 grid md:grid-cols-2 grid-cols-1 md:gap-5"
         imgClass="md:h-48 h-42"
         titleClass="mg:text-2xl text-base font-semibold"
         captionClass="text-gray-900 md:mb-2"
@@ -28,8 +28,8 @@
         title="LAYOUT D"
         mainClass="border-yellow-100"
         gridClass="md:p-5 p-3 md:gap-5 gap-3 md:grid-cols-2 grid-cols-1"
-        textMainClass="pt-1 border w-full"
-        cardMainClass="bg-white flex items-start space-x-3 md:pr-5 md:h-24 h-20"
+        textMainClass="pt-1 w-full"
+        cardMainClass="bg-white dark:bg-dark-200 flex items-start space-x-3 md:pr-5 md:h-24 h-20"
         imgClass="h-full md:w-72 w-46"
         titleClass="md:text-sm text-xs md:leading-5 h-16 overflow-hidden"
       />
@@ -38,7 +38,7 @@
         title="LAYOUT E"
         mainClass="border-green-50"
         gridClass="md:p-5 p-3 md:gap-5 gap-3 lg:grid-cols-5 grid-cols-2 md:grid-cols-4"
-        textMainClass="pt-1 border w-full"
+        textMainClass="pt-1 w-full"
         imgClass="h-24 w-full"
         titleClass="text-xs px-4 text-center"
       />
@@ -54,7 +54,7 @@
         mainClass="border-blue-100"
         gridClass="grid grid-cols-1 p-3 md:p-0"
         textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 pt-5"
-        cardMainClass="bg-white relative"
+        cardMainClass="bg-white dark:bg-dark-200 relative"
         titleClass="text-white font-medium tracking-wide md:text-2xl text-lg pb-2 md:pb-0 pt-1 font-poppin hover:text-white"
         captionClass="text-white hidden md:flex"
         imgClass="md:h-110 h-64 w-full"
@@ -65,7 +65,7 @@
         mainClass="border-primary"
         gridClass="grid md:grid-cols-2 grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
         textMainClass="absolute top-0 left-0 h-full bg-dark-60 w-full z-20 flex justify-center cursor-pointer items-center text-center p-2 pt-5"
-        cardMainClass="bg-white relative"
+        cardMainClass="bg-white dark:bg-dark-200 relative"
         titleClass="text-white font-medium md:text-xl text-lg w-3/4 md:px-4 px-2 tracking-wide pt-1.5 font-poppin hover:text-white"
         imgClass="h-64 w-full"
       />
@@ -81,7 +81,7 @@
         mainClass="border-primary"
         gridClass="grid grid-cols-1 p-3 md:p-5 gap-3 md:gap-5"
         textMainClass="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 md:pt-5 pt-3"
-        cardMainClass="bg-white relative"
+        cardMainClass="bg-white dark:bg-dark-200 relative"
         titleClass="text-white font-medium tracking-wide md:text-2xl text-lg font-poppin hover:text-white"
         captionClass="text-white"
         imgClass="md:h-110 h-56 w-full"
