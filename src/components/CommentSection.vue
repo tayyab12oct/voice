@@ -46,7 +46,7 @@
         <LeaveComment
           title="Reply to Lisa Scholfield"
           icon="flex"
-          @click="reply = false"
+          :click="onHandle"
         />
       </div>
     </transition>
@@ -65,6 +65,11 @@ export default {
     return {
       reply: false,
     };
+  },
+  methods: {
+    onHandle() {
+      this.reply = !this.reply;
+    },
   },
 };
 </script>

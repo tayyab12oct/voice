@@ -94,7 +94,7 @@
         </div>
       </div>
       <router-link
-        to="/"
+        to=""
         class="bg-primary rounded text-sm text-white font-sans font-light px-6 py-1.5"
       >
         Post Comment
@@ -115,7 +115,7 @@ export default {
       default: "hidden",
     },
     click: {
-      type: Function,
+      type: String,
     },
   },
 };
