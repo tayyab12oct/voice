@@ -1,10 +1,19 @@
 <template>
   <div class="bg-dark-900 shadow">
-    <h1
-      class="bg-white p-3 py-3 shadow text-center text-dark-600 font-semibold font-poppin"
-    >
-      Leave a Comment
-    </h1>
+    <div class="relative">
+      <h1
+        class="bg-white p-3 py-3 shadow text-center text-dark-600 font-semibold font-poppin w-full"
+      >
+        {{ title }}
+      </h1>
+      <div
+        :class="icon"
+        @click="click"
+        class="absolute right-0 top-2.5 px-3.5 text-primary cursor-pointer border-l-2 border-dark-50"
+      >
+        x
+      </div>
+    </div>
     <div class="p-5">
       <div class="grid md:grid-cols-3 grid-cols-1 gap-5">
         <div class="md:col-span-3">
@@ -96,5 +105,18 @@
 <script>
 export default {
   components: {},
+  props: {
+    title: {
+      type: String,
+      default: "Leave a Comment",
+    },
+    icon: {
+      type: String,
+      default: "hidden",
+    },
+    click: {
+      type: Function,
+    },
+  },
 };
 </script>

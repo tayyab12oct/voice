@@ -189,6 +189,7 @@
         titleClass="md:text-sm text-xs md:leading-5 h-16 pr-3 overflow-hidden"
       />
       <AboutAuthor />
+      <Comments />
       <LeaveComment />
     </div>
     <div class="lg:w-3/12 md:w-5/12 mx-auto w-full pt-6 lg:pt-0">
@@ -201,6 +202,7 @@ import Asside from "../components/asside.vue";
 import LayoutCard from "../components/LayoutCard.vue";
 import AboutAuthor from "../components/AboutAuthor.vue";
 import LeaveComment from "../components/LeaveComment.vue";
+import Comments from "../components/Comments.vue";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/vue/solid";
 export default {
   components: {
@@ -210,6 +212,7 @@ export default {
     LayoutCard,
     AboutAuthor,
     LeaveComment,
+    Comments,
   },
   data() {
     return {
