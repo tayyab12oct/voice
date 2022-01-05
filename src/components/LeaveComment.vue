@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-light-900 dark:bg-dark-500 shadow">
+  <div
+    class="bg-light-900 dark:bg-dark-500 shadow border dark:border-dark-800 border-transparent"
+  >
     <div class="relative">
       <h1
         :class="titleClass"

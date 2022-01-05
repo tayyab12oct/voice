@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-light-900 dark:bg-dark-500 shadow">
+  <div
+    class="bg-light-900 dark:bg-dark-500 shadow border dark:border-dark-800 border-transparent"
+  >
     <h1
       class="bg-white dark:bg-dark-200 p-3 py-3 shadow text-center uppercase text-dark-600 dark:text-white font-semibold font-poppin"
     >

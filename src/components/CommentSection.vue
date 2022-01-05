@@ -1,5 +1,8 @@
 <template>
-  <div :class="mainClass">
+  <div
+    :class="mainClass"
+    class="border dark:border-dark-800 border-transparent"
+  >
     <div class="border-b border-dark-50 py-4 md:py-5">
       <div class="flex items-center space-x-4">
         <img

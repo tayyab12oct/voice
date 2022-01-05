@@ -2,7 +2,7 @@
   <div class="space-y-6">
     <div class="bg-light-900 dark:bg-dark-900 shadow">
       <h1
-        class="bg-white dark:bg-dark-200 p-3 py-3 shadow text-center uppercase text-dark-600 dark:text-white font-semibold font-poppin"
+        class="bg-white dark:bg-dark-200 p-3 py-3 shadow text-center uppercase text-dark-600 dark:text-white font-semibold font-poppin border-b border-transparent dark:border-dark-20"
       >
         CATEGORIES
       </h1>
