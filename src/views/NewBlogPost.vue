@@ -93,9 +93,10 @@
               >
                 Select File
                 <div
-                  class="bg-primary absolute md:right-2 right-1 top-0 transform md:translate-y-1/4 translate-y-4 cursor-pointer rounded-sm text-white h-7 w-7 flex items-center justify-center"
+                  class="bg-primary text-xs absolute right-1 top-0 transform md:translate-y-1/4 translate-y-4 cursor-pointer rounded-sm text-white h-7 px-2 flex items-center justify-center"
                 >
-                  <ChevronDownIcon class="w-3.5" />
+                  Browse
+                  <!-- <ChevronDownIcon class="w-3.5" /> -->
                 </div>
               </label>
             </div>
