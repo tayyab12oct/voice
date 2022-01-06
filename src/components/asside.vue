@@ -64,7 +64,7 @@
           </div>
         </div>
         <div
-          class="flex font-sans category_color color_green border-l-2 border-green-50 font-light cursor-pointer group"
+          class="flex font-sans category_color color_green_50 border-l-2 border-green-50 font-light cursor-pointer group"
         >
           <h1
             class="w-full pl-5 h-10 flex items-center text-sm text-gray-400 dark:text-gray-200 group-hover:text-white"
@@ -196,7 +196,7 @@ export default {
   background-position: right bottom;
   transition: all 0.3s ease-out;
 }
-.color_green {
+.color_green_50 {
   background: linear-gradient(to right, #46c49c 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
