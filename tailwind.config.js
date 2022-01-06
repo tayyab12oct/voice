@@ -59,7 +59,7 @@ module.exports = {
       purple: { 100: "#ca85ca" },
       emerald: colors.emerald,
       indigo: colors.indigo,
-      yellow: { ...colors.yellow, 100: "#f4b23f" },
+      yellow: { ...colors.yellow, 100: "#f4b23f", 200: "#dfaa63" },
     },
     fontFamily: {
       sans: ["Open Sans"],

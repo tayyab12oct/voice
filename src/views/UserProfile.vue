@@ -125,15 +125,53 @@
         </table>
       </div>
       <div
-        class="p-4 bg-light-900 dark:bg-dark-500 shadow border border-transparent dark:border-dark-20"
+        class="bg-light-900 dark:bg-dark-500 shadow border border-transparent dark:border-dark-20 divide-y divide-light-500 dark:divide-dark-20"
       >
-        <div class="flex">
-          <router-link
-            to=""
-            class="hover:text-primary transform transition-all cursor-pointer"
+        <div class="py-5 px-5" v-for="n in 4" :key="n">
+          <div class="flex items-center justify-between">
+            <router-link
+              to=""
+              class="hover:text-primary dark:text-white font-semibold text-xl font-sans transform transition-all cursor-pointer"
+            >
+              This is my first Question
+            </router-link>
+            <div
+              class="flex items-center bg-primary text-xs px-2 py-1 rounded-xs cursor-pointer text-white dark:text-gray-200 hover:text-white transition-all"
+            >
+              <PencilAltIcon class="w-3.5 mr-1" /> Edit
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap text-sm pt-4 font-light font-sans text-gray-400 dark:text-gray-200"
           >
-            This is my first Question
-          </router-link>
+            <p class="pr-4 text-primary font-semibold flex items-center">
+              <CheckIcon class="w-4 mr-1" /> in progress
+            </p>
+            <p class="pr-4 text-yellow-200 flex items-center">
+              <StarIcon class="w-4 mr-1" /> 5
+            </p>
+            <router-link
+              to=""
+              class="pr-4 hover:text-primary transition-all flex items-center"
+              ><FolderIcon class="w-4 mr-1" /> wordpress</router-link
+            >
+            <p class="pr-4 text flex items-center">
+              <ClockIcon class="w-4 mr-1" /> 15 secs ago
+            </p>
+            <router-link
+              to=""
+              class="pr-4 hover:text-primary transition-all flex items-center"
+              ><ChatIcon class="w-4 mr-1" /> 5 Answers</router-link
+            >
+            <router-link
+              to=""
+              class="pr-4 hover:text-primary transition-all flex items-center"
+              ><ReplyIcon class="w-4 mr-1" /> Reply</router-link
+            >
+            <p class="pr-4 text flex items-center">
+              <UserIcon class="w-4 mr-1" /> 5 views
+            </p>
+          </div>
         </div>
       </div>
       <Pagination />
@@ -150,14 +188,30 @@ import {
   PlusSmIcon,
   LocationMarkerIcon,
   GlobeIcon,
+  CheckIcon,
+  StarIcon,
+  FolderIcon,
+  ChatIcon,
+  UserIcon,
+  ReplyIcon,
+  PencilAltIcon,
 } from "@heroicons/vue/solid";
+import { ClockIcon } from "@heroicons/vue/outline";
 export default {
   components: {
     Asside,
     PlusSmIcon,
     LocationMarkerIcon,
     GlobeIcon,
+    CheckIcon,
     Pagination,
+    StarIcon,
+    FolderIcon,
+    ClockIcon,
+    ChatIcon,
+    UserIcon,
+    ReplyIcon,
+    PencilAltIcon,
   },
   data() {
     return {};
