@@ -1,143 +1,63 @@
 <template>
-  <TransitionRoot as="template" :show="sidebarOpen">
-    <Dialog
-      as="div"
-      class="absolute w-full inset-0 flex md:hidden bg-light-gray"
-      style="z-index: 1000 !important"
+  <div class="bg-white h-screen w-96 z-50 drawer" :show="sidebarOpen">
+    <div
+      class="flex flex-col h-screen flex-grow bg-light-90 shadow-xl overflow-y-auto"
     >
-      <TransitionChild
-        as="template"
-        enter="transition ease-in-out duration-300 transform"
-        enter-from="-translate-x-full"
-        enter-to="translate-x-0"
-        leave="transition ease-in-out duration-300 transform"
-        leave-from="translate-x-0"
-        leave-to="-translate-x-full"
-      >
-        <div
-          class="relative flex flex-col px-7 w-96 drawer"
-          style="background: #1d1f24"
-        >
-          <TransitionChild
-            as="template"
-            enter="ease-in-out duration-300"
-            enter-from="opacity-0"
-            enter-to="opacity-100"
-            leavea="ease-in-out duration-300"
-            leave-from="opacity-100"
-            leave-to="opacity-0"
-          >
-            <div class="absolute top-0 right-0 pt-2"></div>
-          </TransitionChild>
+      <div class="flex-grow flex flex-col divide-y divide-dark-10">
+        <div class="divide-y divide-dark-10">
           <div
-            class="flex items-center justify-between h-32 flex-shrink-0 px-3"
+            class="divide-y divide-dark-10"
+            v-for="item in navigation"
+            :key="item.name"
           >
-            <div class="w-40">
-              <img alt="" src="@/assets/logo.png" />
+            <div
+              :class="[
+                item.current
+                  ? 'text-primary '
+                  : 'text-gray-700 hover:text-primary',
+                'group flex justify-between px-4 text-md font-poppin font-normal cursor-pointer transform transition-all divide-x divide-dark-10',
+              ]"
+            >
+              <router-link :to="item.to" class="py-3.5 w-full">
+                {{ item.name }}</router-link
+              >
+              <div
+                class="pl-5 pr-1 flex items-center"
+                @click="menu = !menu"
+                v-if="item.children"
+              >
+                <ChevronDownIcon class="w-3" />
+              </div>
             </div>
-            <button class="focus:outline-none" @click="close">
-              <span class="sr-only">Open sidebar</span>
-              <XIcon class="h-9 w-9 text-primary" aria-hidden="true" />
-            </button>
-          </div>
-          <div class="mt-5 flex-1 h-0 overflow-y-auto w-full">
-            <nav class="flex-1 py-4 w-full">
-              <template v-for="item in navigation" :key="item.name">
-                <Disclosure as="div" class="space-y-0.5">
-                  <DisclosureButton
-                    :class="[
-                      item.current
-                        ? 'bg-black-100 text-white'
-                        : 'text-white hover:text-white',
-                      'group flex items-center w-full py-0.5 text-2xl cursor-pointer font-semibold tracking-wide transition-all',
-                    ]"
-                  >
-                    <router-link
-                      :to="item.to"
-                      v-if="!item.children"
-                      class="text-gray-300 w-full rounded bg-info p-5"
-                    >
-                      <div class="w-full" @click="close">
-                        <span class="w-full pl-2 text-left flex items-center">
-                          {{ item.name }}
-                          <component
-                            :is="item.iconR"
-                            :class="[
-                              item.current
-                                ? 'text-gray-100 rotate-180'
-                                : 'text-gray-100 group-hover:text-gray-100',
-                              'ml-auto h-7',
-                            ]"
-                            aria-hidden="true"
-                          />
-                        </span>
-                      </div>
-                    </router-link>
-                    <div
-                      class="text-gray-300 w-full rounded bg-info p-5"
-                      v-if="item.children"
-                    >
-                      <div class="w-full">
-                        <span class="w-full pl-2 text-left flex items-center">
-                          {{ item.name }}
-                          <component
-                            :is="item.iconR"
-                            :class="[
-                              item.current
-                                ? 'text-gray-100 rotate-180'
-                                : 'text-gray-100 group-hover:text-gray-100',
-                              'ml-auto h-7',
-                            ]"
-                            aria-hidden="true"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </DisclosureButton>
-                  <DisclosurePanel
-                    class="space-y-0.5 pb-3 transition-all"
-                    v-if="item.children"
-                  >
-                    <router-link
-                      v-for="subItem in item.children"
-                      :key="subItem.name"
-                      :to="subItem.to"
-                      @click="close"
-                      class="group w-full flex px-7 py-5 text-xl rounded text-white font-semibold tracking-wide"
-                    >
-                      {{ subItem.name }}
-                    </router-link>
-                  </DisclosurePanel>
-                </Disclosure>
-              </template>
-            </nav>
+
+            <div class="divide-y divide-dark-10" v-if="item.children">
+              <router-link
+                v-for="v in item.children"
+                :key="v"
+                :to="v.to"
+                class="group text-gray-700 hover:text-primary py-3.5 flex justify-between pr-4 pl-8 text-md font-poppin font-normal cursor-pointer transform transition-all divide-x divide-dark-10"
+              >
+                {{ v.name }}
+              </router-link>
+            </div>
           </div>
         </div>
-      </TransitionChild>
-    </Dialog>
-  </TransitionRoot>
+        <div class="p-3 px-4">
+          <input
+            type="text"
+            class="bg-gray-50 rounded w-full p-2 py-2.5 text-gray-70 placeholder-gray-70 focus:outline-none text-md"
+            placeholder="Type here to search..."
+          />
+        </div>
+        <div class="p-3 px-4 flex items-center">f</div>
+        <div></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import {
-  Dialog,
-  DialogOverlay,
-  Menu,
-  TransitionChild,
-  TransitionRoot,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/vue";
-import {
-  UserIcon,
-  MenuAlt2Icon,
-  ChevronDoubleRightIcon,
-  ChevronDownIcon,
-  XIcon,
-  ChipIcon,
-} from "@heroicons/vue/outline";
-import { SearchIcon } from "@heroicons/vue/solid";
+import { ChevronDownIcon } from "@heroicons/vue/outline";
 
 const navigation = [
   {
@@ -145,121 +65,40 @@ const navigation = [
     name: "Home",
   },
   {
-    to: "/ask-question",
-    name: "Ask Question",
+    to: "/home",
+    name: "Home2",
   },
   {
-    to: "#Questions",
-    name: "Questions",
-    iconR: ChevronDownIcon,
-    current: true,
-    children: [
-      {
-        to: "/question-category",
-        name: "Questions Category",
-      },
-      {
-        to: "/single_question",
-        name: "Question Single",
-      },
-    ],
-  },
-  {
-    to: "#",
-    name: "User",
-    iconR: ChevronDownIcon,
-    children: [
-      {
-        to: "/user_profile",
-        name: "User Profile",
-      },
-      {
-        to: "/user_questions",
-        name: "User Questions",
-      },
-      {
-        to: "/user_answers",
-        name: "User Answers",
-      },
-      {
-        to: "/user_favorite_questions",
-        name: "User Favorite Questions",
-      },
-      {
-        to: "/user_points",
-        name: "User Points",
-      },
-      {
-        to: "/edit_profile",
-        name: "Edit Profile",
-      },
-    ],
-  },
-  {
-    to: "#",
+    to: "/blog",
     name: "Blog",
-    iconR: ChevronDownIcon,
-    children: [
-      {
-        to: "/blog",
-        name: "Blog",
-      },
-      {
-        to: "/single_post",
-        name: "Post Single",
-      },
-    ],
   },
   {
-    to: "#",
-    name: "Pages",
-    iconR: ChevronDownIcon,
-    children: [
-      {
-        to: "/login",
-        name: "Login",
-      },
-      {
-        to: "/contact",
-        name: "Contact Us",
-      },
-      {
-        to: "/ask-question",
-        name: "Ask Question",
-      },
-      {
-        to: "/404",
-        name: "404",
-      },
-    ],
+    to: "/new_blog_post",
+    name: "New Blog Post",
   },
   {
-    to: "/contact",
-    name: "Contact Us",
+    to: "/profile",
+    name: "User Profile",
+  },
+  {
+    to: "/edit-profile",
+    name: "Edit Profile",
+  },
+  {
+    to: "/login",
+    name: "Login",
   },
 ];
 
 export default {
   props: ["sidebarOpen"],
   components: {
-    Dialog,
-    DialogOverlay,
-    Menu,
-    TransitionChild,
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    TransitionRoot,
-    MenuAlt2Icon,
-    SearchIcon,
-    ChevronDoubleRightIcon,
-    XIcon,
-    ChipIcon,
-    UserIcon,
+    ChevronDownIcon,
   },
   data() {
     return {
       navigation,
+      menu: false,
     };
   },
   methods: {
@@ -271,11 +110,6 @@ export default {
 </script>
 <style>
 .drawer a.router-link-exact-active {
-  background-color: #ff7361;
-  box-shadow: 0px 0px 6px #ff7361;
-  color: #fff;
-}
-.drawer a.router-link-exact-active .menu-nav-arrow {
-  color: #fff !important;
+  color: #da463a;
 }
 </style>
