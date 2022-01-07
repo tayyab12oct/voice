@@ -98,9 +98,10 @@
       title="FEATURED POSTS"
       mainClass="border-transparent"
       gridClass="md:p-5 p-3 md:gap-5 gap-3 grid-cols-1"
-      textMainClass="w-full"
-      cardMainClass="flex items-start shadow-none bg-transparent space-x-3 md:pr-5 md:h-24 h-20"
-      imgClass="h-20 w-46"
+      cardMainClass="grid grid-cols-5 overflow-hidden items-start shadow-none space-x-3 md:h-24 h-20"
+      textMainClass="w-full col-span-3"
+      imgClass="h-20 w-full col-span-2"
+      img="w-full h-18"
       titleClass="md:text-sm text-xs h-16 overflow-hidden"
     />
     <LayoutCard

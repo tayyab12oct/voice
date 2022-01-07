@@ -1,63 +1,79 @@
 <template>
-  <div class="bg-white h-screen w-96 z-50 drawer" :show="sidebarOpen">
-    <div
-      class="flex flex-col h-screen flex-grow bg-light-90 shadow-xl overflow-y-auto"
+  <TransitionRoot as="template" :show="sidebarOpen">
+    <Dialog
+      as="div"
+      class="absolute w-full inset-0 flex lg:hidden bg-transparent"
+      style="z-index: 1000 !important"
     >
-      <div class="flex-grow flex flex-col divide-y divide-dark-10">
-        <div class="divide-y divide-dark-10">
-          <div
-            class="divide-y divide-dark-10"
-            v-for="item in navigation"
-            :key="item.name"
+      <TransitionChild
+        as="template"
+        enter="transition ease-in-out duration-300 transform"
+        enter-from="-translate-x-full"
+        enter-to="translate-x-0"
+        leave="transition ease-in-out duration-300 transform"
+        leave-from="translate-x-0"
+        leave-to="-translate-x-full"
+      >
+        <div
+          class="relative flex flex-col w-64 nav bg-light-90 dark:bg-dark-500 shadow-xl"
+        >
+          <TransitionChild
+            as="template"
+            enter="ease-in-out duration-300"
+            enter-from="opacity-0"
+            enter-to="opacity-100"
+            leavea="ease-in-out duration-300"
+            leave-from="opacity-100"
+            leave-to="opacity-0"
           >
-            <div
-              :class="[
-                item.current
-                  ? 'text-primary '
-                  : 'text-gray-700 hover:text-primary',
-                'group flex justify-between px-4 text-md font-poppin font-normal cursor-pointer transform transition-all divide-x divide-dark-10',
-              ]"
-            >
-              <router-link :to="item.to" class="py-3.5 w-full">
-                {{ item.name }}</router-link
-              >
+            <div class="absolute top-0 right-0 pt-2"></div>
+          </TransitionChild>
+          <div
+            class="flex-grow flex flex-col divide-y divide-dark-10 bg-light-90 dark:bg-dark-500"
+          >
+            <div class="divide-y divide-dark-10">
               <div
-                class="pl-5 pr-1 flex items-center"
-                @click="menu = !menu"
-                v-if="item.children"
+                class="divide-y divide-dark-10"
+                v-for="item in navigation"
+                :key="item.name"
               >
-                <ChevronDownIcon class="w-3" />
+                <div
+                  @click="close"
+                  :class="[
+                    item.current
+                      ? 'text-primary '
+                      : 'text-gray-700 dark:text-white hover:text-primary',
+                    'group flex justify-between px-4 text-md font-poppin font-normal cursor-pointer transform transition-all divide-x divide-dark-10',
+                  ]"
+                >
+                  <router-link
+                    :to="item.to"
+                    class="py-3.5 w-full focus:outline-none"
+                  >
+                    {{ item.name }}</router-link
+                  >
+                </div>
               </div>
             </div>
-
-            <div class="divide-y divide-dark-10" v-if="item.children">
-              <router-link
-                v-for="v in item.children"
-                :key="v"
-                :to="v.to"
-                class="group text-gray-700 hover:text-primary py-3.5 flex justify-between pr-4 pl-8 text-md font-poppin font-normal cursor-pointer transform transition-all divide-x divide-dark-10"
-              >
-                {{ v.name }}
-              </router-link>
+            <div class="p-3 px-4">
+              <input
+                type="text"
+                class="bg-gray-50 dark:bg-dark-300 rounded w-full p-2 py-2.5 text-gray-70 dark:text-gray-200 placeholder-gray-70 dark:placeholder-gray-200 focus:outline-none md:text-md text-sm"
+                placeholder="Type here to search..."
+              />
             </div>
+            <!-- <div class="p-3 px-4 flex items-center">f</div> -->
+            <div></div>
           </div>
         </div>
-        <div class="p-3 px-4">
-          <input
-            type="text"
-            class="bg-gray-50 rounded w-full p-2 py-2.5 text-gray-70 placeholder-gray-70 focus:outline-none text-md"
-            placeholder="Type here to search..."
-          />
-        </div>
-        <div class="p-3 px-4 flex items-center">f</div>
-        <div></div>
-      </div>
-    </div>
-  </div>
+      </TransitionChild>
+    </Dialog>
+  </TransitionRoot>
 </template>
 
 <script>
-import { ChevronDownIcon } from "@heroicons/vue/outline";
+import { Dialog, TransitionChild, TransitionRoot } from "@headlessui/vue";
+// import { XIcon } from "@heroicons/vue/outline";
 
 const navigation = [
   {
@@ -93,12 +109,14 @@ const navigation = [
 export default {
   props: ["sidebarOpen"],
   components: {
-    ChevronDownIcon,
+    Dialog,
+    TransitionChild,
+    TransitionRoot,
+    // XIcon,
   },
   data() {
     return {
       navigation,
-      menu: false,
     };
   },
   methods: {
@@ -108,8 +126,8 @@ export default {
   },
 };
 </script>
-<style>
-.drawer a.router-link-exact-active {
+<style scoped>
+.nav a.router-link-exact-active {
   color: #da463a;
 }
 </style>

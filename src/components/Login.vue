@@ -16,7 +16,7 @@
           name="user_name"
           id="name"
           placeholder="Username"
-          class="bg-transparent block w-full p-2 pl-0 dark:placeholder-gray-200 focus:outline-none"
+          class="bg-transparent block w-full sm:text-sm md:py-2.5 p-2 px-3 md:pr-4 pl-0 ml:pl-0 dark:placeholder-gray-200 focus:outline-none"
         />
       </div>
       <div
@@ -28,11 +28,11 @@
           type="password"
           id="password"
           placeholder="Password"
-          class="bg-transparent block w-full p-2 pl-0 dark:placeholder-gray-200 focus:outline-none"
+          class="bg-transparent block w-full sm:text-sm md:py-2.5 p-2 px-3 md:pr-4 pl-0 ml:pl-0 dark:placeholder-gray-200 focus:outline-none"
         />
         <router-link
           to="/login"
-          class="bg-dark-500 absolute right-2 top-0 transform translate-y-1/4 text-center rounded-sm text-xs text-white font-sans px-3 py-1 font-light"
+          class="bg-dark-500 absolute right-2 top-0 transform translate-y-1/3 text-center rounded-sm text-xs text-white font-sans px-3 py-1 font-light"
         >
           Forget
         </router-link>

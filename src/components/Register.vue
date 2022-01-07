@@ -17,7 +17,7 @@
             name="user_name"
             type="text"
             id="name"
-            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded md:p-2.5 p-2 px-3 md:px-4 focus:outline-none"
           />
         </div>
       </div>
@@ -32,7 +32,7 @@
             name="email"
             type="email"
             id="email"
-            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded md:p-2.5 p-2 px-3 md:px-4 focus:outline-none"
           />
         </div>
       </div>
@@ -47,7 +47,7 @@
             name="password"
             type="password"
             id="password"
-            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded md:p-2.5 p-2 px-3 md:px-4 focus:outline-none"
           />
         </div>
       </div>
@@ -62,7 +62,7 @@
             name="password"
             type="password"
             id="password"
-            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded p-2 focus:outline-none"
+            class="border bg-transparent dark:bg-dark-300 dark:text-gray-200 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded md:p-2.5 p-2 px-3 md:px-4 focus:outline-none"
           />
         </div>
       </div>

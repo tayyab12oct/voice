@@ -31,7 +31,7 @@ module.exports = {
       },
       light: {
         10: "",
-        20: "",
+        20: "#fcfcfc",
         90: "rgba(252,252,252,.95)",
         100: "",
         200: "#E6E6E6",
@@ -97,6 +97,7 @@ module.exports = {
       30: "7.5rem",
       32: "8rem",
       34: "8.5rem",
+      35: "8.7rem",
       36: "9rem",
       38: "9.5rem",
       40: "10rem",
@@ -191,7 +192,7 @@ module.exports = {
       lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
       xl: "0 0 15px 0 rgb(0 0 0 / 40%)",
       "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-      inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+      inner: "inset 0 1px 3px rgb(0 0 0 / 10%)",
       none: "none",
     },
     margin: (theme, { negative }) => ({

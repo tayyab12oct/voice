@@ -87,7 +87,7 @@
     </div>
     <div class="bg-dark-300 py-0.5 font-sans">
       <div
-        class="max-w-6xl w-full px-4 xl:px-0 mx-auto py-4 flex items-center justify-between"
+        class="max-w-6xl w-full px-4 xl:px-0 mx-auto py-4 flex flex-col md:flex-row items-center justify-between"
       >
         <p class="text-gray-200 text-sm font-light">
           Copyright © 2022. Created by
@@ -96,7 +96,7 @@
           >.
         </p>
         <div
-          class="flex items-center space-x-2 text-primary text-sm font-light"
+          class="flex items-center pt-1 md:pt-0 space-x-2 text-primary text-sm font-light"
         >
           <router-link class="hover:underline" to="/">Typography </router-link>
           <router-link class="hover:underline" to="/">Layouts </router-link>
