@@ -13,7 +13,7 @@
           class="px-4 text-dark-100 dark:text-white focus:outline-none"
           @click="mode"
         >
-          Open sidebar
+          Mode
         </button>
         <div class="max-w-6xl w-full py-8 md:px-4 px-2.5 xl:px-0 mx-auto">
           <router-view />
