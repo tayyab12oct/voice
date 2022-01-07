@@ -7,7 +7,7 @@
         @closeSidebar="showSidebarOpen"
       />
       <div class="h-screen overflow-y-auto w-full">
-        <TopBar />
+        <TopBar :click="mode" />
         <Header />
         <button
           class="px-4 text-dark-100 dark:text-white focus:outline-none"

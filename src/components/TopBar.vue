@@ -9,6 +9,11 @@
         <router-link class="hover:underline" to="/">Contact </router-link>
         <router-link class="hover:underline" to="/">Forum </router-link>
         <router-link class="hover:underline" to="/">Shop </router-link>
+        <p class="cursor-pointer" @click="click">
+          <span>Dark</span>
+          <span> Light</span>
+          Mode
+        </p>
       </div>
       <div class="flex items-center space-x-2 text-white text-sm">
         <router-link to="/">icon </router-link>
@@ -20,3 +25,8 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: ["click"],
+};
+</script>
