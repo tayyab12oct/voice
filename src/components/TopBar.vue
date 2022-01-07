@@ -10,8 +10,8 @@
         <router-link class="hover:underline" to="/">Forum </router-link>
         <router-link class="hover:underline" to="/">Shop </router-link>
         <p class="cursor-pointer" @click="click">
-          <span>Dark</span>
-          <span> Light</span>
+          <span v-if="mode === true">Dark</span>
+          <span v-if="mode === false"> Light</span>
           Mode
         </p>
       </div>
@@ -27,6 +27,6 @@
 </template>
 <script>
 export default {
-  props: ["click"],
+  props: ["click", "mode"],
 };
 </script>

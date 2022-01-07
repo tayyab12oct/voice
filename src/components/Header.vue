@@ -9,7 +9,7 @@
         </router-link>
       </div>
       <div
-        class="max-w-6xl w-full px-4 xl:px-0 mx-auto py-6 flex items-center justify-between"
+        class="max-w-6xl sm:hidden w-full px-4 xl:px-0 mx-auto py-6 flex items-center justify-between"
       >
         dsfjkls
       </div>

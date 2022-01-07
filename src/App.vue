@@ -7,14 +7,14 @@
         @closeSidebar="showSidebarOpen"
       />
       <div class="h-screen overflow-y-auto w-full">
-        <TopBar :click="mode" />
+        <TopBar :click="mode" :mode="mode" />
         <Header />
-        <button
+        <!-- <button
           class="px-4 text-dark-100 dark:text-white focus:outline-none"
-          @click="mode"
+          @click="showSidebarOpen"
         >
-          Mode
-        </button>
+          Show Sidebar
+        </button> -->
         <div class="max-w-6xl w-full py-8 md:px-4 px-2.5 xl:px-0 mx-auto">
           <router-view />
         </div>
