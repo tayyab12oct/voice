@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-6">
+  <div class="space-y-6 h-full">
     <div class="bg-light-900 dark:bg-dark-900 shadow">
       <h1
         class="bg-white dark:bg-dark-200 p-3 py-3 shadow text-center uppercase text-dark-600 dark:text-white font-semibold font-poppin border-b border-transparent dark:border-dark-20"
@@ -116,8 +116,8 @@
       img="w-full h-full rounded-full"
     />
     <Login />
-    <div class="z-30">
-      <img class="sticky top-0" alt="ads" src="../assets/voice_ad.png" />
+    <div class="sticky top-10 z-30">
+      <img alt="ads" src="../assets/voice_ad.png" />
     </div>
   </div>
 </template>

@@ -26,7 +26,7 @@
         </router-link>
       </div>
     </div>
-    <div class="bg-light-20 dark:bg-dark-800 shadow-inner nav">
+    <div class="bg-light-20 dark:bg-dark-800 shadow-inner nav sticky top-0">
       <div
         class="max-w-6xl px-4 xl:px-0 w-full mx-auto lg:flex items-center hidden border-l border-dark-50"
       >
