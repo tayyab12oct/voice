@@ -62,7 +62,7 @@
               <select
                 id="location"
                 name="location"
-                class="border bg-transparent text-sm cursor-pointer text-gray-400 dark:bg-dark-300 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded md:p-2.5 p-2 px-2 md:px-3 focus:outline-none"
+                class="border bg-transparent text-sm cursor-pointer text-gray-400 dark:text-gray-200 dark:bg-dark-300 focus:border-dark-20 block w-full sm:text-sm border-dark-10 rounded md:p-2.5 p-2 px-2 md:px-3 focus:outline-none"
               >
                 <option selected="">Select a Category</option>
                 <option>Mexico</option>

@@ -64,11 +64,8 @@
             </div>
             <div></div>
           </div>
-          <div
-            class="p-3 px-4 dark:text-white border-t border-dark-10"
-            @click="onChangeMode"
-          >
-            <p class="cursor-pointer">Mode</p>
+          <div @click="close" class="py-3 px-4 flex justify-end">
+            <ArrowLeftIcon class="w-6 dark:text-white" />
           </div>
         </div>
       </TransitionChild>
@@ -78,6 +75,7 @@
 
 <script>
 import { Dialog, TransitionChild, TransitionRoot } from "@headlessui/vue";
+import { ArrowLeftIcon } from "@heroicons/vue/outline";
 
 const navigation = [
   {
@@ -111,12 +109,12 @@ const navigation = [
 ];
 
 export default {
-  props: ["sidebarOpen", "onChangeMode"],
+  props: ["sidebarOpen"],
   components: {
     Dialog,
     TransitionChild,
     TransitionRoot,
-    // XIcon,
+    ArrowLeftIcon,
   },
   data() {
     return {
