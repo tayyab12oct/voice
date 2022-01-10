@@ -63,7 +63,7 @@
 import { SunIcon, MoonIcon } from "@heroicons/vue/solid";
 import { Switch } from "@headlessui/vue";
 export default {
-  props: ["click", "mode"],
+  props: ["click"],
   components: {
     Switch,
     SunIcon,
