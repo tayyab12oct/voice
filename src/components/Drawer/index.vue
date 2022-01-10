@@ -62,8 +62,13 @@
                 placeholder="Type here to search..."
               />
             </div>
-            <!-- <div class="p-3 px-4 flex items-center">f</div> -->
             <div></div>
+          </div>
+          <div
+            class="p-3 px-4 dark:text-white border-t border-dark-10"
+            @click="onChangeMode"
+          >
+            <p class="cursor-pointer">Mode</p>
           </div>
         </div>
       </TransitionChild>
@@ -73,7 +78,6 @@
 
 <script>
 import { Dialog, TransitionChild, TransitionRoot } from "@headlessui/vue";
-// import { XIcon } from "@heroicons/vue/outline";
 
 const navigation = [
   {
@@ -107,7 +111,7 @@ const navigation = [
 ];
 
 export default {
-  props: ["sidebarOpen"],
+  props: ["sidebarOpen", "onChangeMode"],
   components: {
     Dialog,
     TransitionChild,

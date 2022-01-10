@@ -8,10 +8,14 @@
       13 COMMENTS
     </h1>
     <div class="md:p-5 p-3 space-y-5">
-      <div class="bg-white dark:bg-dark-200 shadow md:px-5 px-4">
-        <CommentSection />
-        <CommentSection mainClass="lg:ml-4" />
-        <CommentSection mainClass="lg:ml-8" />
+      <div class="bg-white dark:bg-dark-200 md:px-5 px-4">
+        <CommentSection :show="show" :onClick="showChild" showClass="" />
+        <transition name="fade">
+          <div v-if="show === true">
+            <CommentSection class="lg:ml-20" />
+            <CommentSection class="lg:ml-40" />
+          </div>
+        </transition>
       </div>
     </div>
   </div>
@@ -20,5 +24,15 @@
 import CommentSection from "./CommentSection.vue";
 export default {
   components: { CommentSection },
+  data() {
+    return {
+      show: false,
+    };
+  },
+  methods: {
+    showChild() {
+      this.show = !this.show;
+    },
+  },
 };
 </script>

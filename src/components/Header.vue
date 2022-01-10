@@ -4,8 +4,11 @@
       <div
         class="max-w-6xl w-full px-4 xl:px-0 mx-auto lg:py-6 py-2.5 lg:h-35 flex items-center justify-between"
       >
-        <div to="/" class="flex-1 lg:hidden" @click="showSidebarOpen">
-          <MenuIcon class="w-7 text-primary cursor-pointer" />
+        <div to="/" class="flex-1 lg:hidden">
+          <MenuIcon
+            class="w-7 text-primary cursor-pointer"
+            @click="showSidebarOpen"
+          />
         </div>
         <router-link
           to="/"
@@ -43,7 +46,11 @@
         </div>
       </div>
     </div>
-    <Drawer :sidebarOpen="sidebarOpen" @closeSidebar="showSidebarOpen" />
+    <Drawer
+      :sidebarOpen="sidebarOpen"
+      @closeSidebar="showSidebarOpen"
+      :onChangeMode="onChangeMode"
+    />
   </div>
 </template>
 <script>
@@ -82,6 +89,7 @@ const navigation = [
 ];
 
 export default {
+  porps: ["onChangeMode"],
   components: {
     MenuIcon,
     Drawer,

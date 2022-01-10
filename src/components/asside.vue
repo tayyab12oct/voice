@@ -116,6 +116,9 @@
       img="w-full h-full rounded-full"
     />
     <Login />
+    <div class="z-30">
+      <img class="sticky top-0" alt="ads" src="../assets/voice_ad.png" />
+    </div>
   </div>
 </template>
 <script>
