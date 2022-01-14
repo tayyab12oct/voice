@@ -56,7 +56,7 @@ export default {
   },
   data() {
     return {
-      enabled: false,
+      enabled: true,
     };
   },
 };
