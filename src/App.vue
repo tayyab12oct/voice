@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-100 dark:bg-dark-100">
     <TopBar :click="mode" />
-    <Header :click="mode" />
+    <Header :onClick="mode" />
     <div class="max-w-6xl w-full py-8 md:px-4 px-2.5 xl:px-0 mx-auto">
       <router-view />
     </div>

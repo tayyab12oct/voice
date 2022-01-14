@@ -16,7 +16,9 @@
         >
           <img alt="Vue logo" class="lg:w-36 w-30" src="../assets/logo.png" />
         </router-link>
-        <div class="flex-1"></div>
+        <div class="flex-1 flex justify-end items-center">
+          <Switch :click="onClick" />
+        </div>
         <router-link to="/">
           <img
             alt="Vue logo"
@@ -56,6 +58,7 @@
 <script>
 import { MenuIcon } from "@heroicons/vue/outline";
 import Drawer from "./Drawer/index.vue";
+import Switch from "./Switch.vue";
 
 const navigation = [
   {
@@ -89,9 +92,13 @@ const navigation = [
 ];
 
 export default {
-  porps: ["onChangeMode"],
+  props: {
+    onChangeMode: { type: String, default: "" },
+    onClick: { type: Function, default: () => {} },
+  },
   components: {
     MenuIcon,
+    Switch,
     Drawer,
   },
   data() {
