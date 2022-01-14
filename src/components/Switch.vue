@@ -3,9 +3,7 @@
     @click="click"
     v-model="enabled"
     :class="[
-      enabled
-        ? 'bg-white bg-opacity-80 shadow border border-primary'
-        : 'bg-gray-700',
+      enabled ? 'bg-white bg-opacity-80 shadow' : 'bg-gray-700',
       'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:outline-none',
     ]"
   >
