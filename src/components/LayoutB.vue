@@ -45,7 +45,7 @@
               Fashion</router-link
             >
             <router-link
-              to=""
+              to="/blog"
               class="text-dark-600 dark:text-white hover:text-primary font-poppin transform transition-all md:text-2xl font-semibold text-base"
             >
               {{ v.title }}</router-link

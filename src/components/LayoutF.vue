@@ -16,7 +16,7 @@
             class="text-sm font-poppin text-primary font-semibold"
           >
             <router-link
-              to=""
+              to="/blog"
               class="text-dark-600 dark:text-white hover:text-primary"
             >
               {{ v.title }}</router-link

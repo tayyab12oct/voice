@@ -8,11 +8,13 @@
       />
     </div>
     <div class="pt-1">
-      <h2
-        class="text-sm font-poppin text-white hover:text-primary font-semibold transform transition duration-500 cursor-pointer"
-      >
-        For Jazz Appreciation Month: Jazz Artists Who...
-      </h2>
+      <router-link to="/blog">
+        <h2
+          class="text-sm font-poppin text-white hover:text-primary font-semibold transform transition duration-500 cursor-pointer"
+        >
+          For Jazz Appreciation Month: Jazz Artists Who...
+        </h2>
+      </router-link>
       <p class="text-gray-900 text-xs pt-1">8,383 Views</p>
     </div>
   </div>

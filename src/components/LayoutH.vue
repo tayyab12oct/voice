@@ -37,7 +37,7 @@
               {{ v.category }}</router-link
             >
             <router-link
-              to=""
+              to="/blog"
               class="text-white font-medium md:text-xl text-lg w-3/4 md:px-4 px-2 tracking-wide pt-1.5 font-poppin hover:text-white"
             >
               {{ v.title }}</router-link

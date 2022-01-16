@@ -48,7 +48,7 @@
             >
             <router-link
               :class="titleClass"
-              to=""
+              to="/blog"
               class="text-dark-600 dark:text-white font-medium hover:text-primary font-poppin transform transition-all"
             >
               {{ v.title }}</router-link

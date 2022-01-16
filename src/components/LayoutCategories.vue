@@ -30,7 +30,7 @@
             class="absolute bottom-0 left-0 bg-dark-60 w-full z-20 items-center text-center p-2 pt-5 flex flex-col font-sans"
           >
             <router-link
-              to=""
+              to="/blog"
               class="text-white font-medium tracking-wide md:text-2xl text-lg pb-2 md:pb-0 pt-1 font-poppin transform transition-all"
             >
               {{ v.title }}</router-link

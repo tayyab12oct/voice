@@ -32,7 +32,7 @@
               Environment</router-link
             >
             <router-link
-              to=""
+              to="/blog"
               class="md:text-3xl text-lg md:leading-wide md:w-3/4 md:pb-2 text-dark-600 dark:text-white font-medium hover:text-primary font-poppin transform transition-all"
             >
               San Francisco is the Most Photographed City in North
