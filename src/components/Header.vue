@@ -16,7 +16,7 @@
         >
           <img alt="Vue logo" class="lg:w-36 w-30" src="../assets/logo.png" />
         </router-link>
-        <div class="flex-1 flex justify-end items-center">
+        <div class="flex-1 flex justify-end items-center lg:hidden">
           <Switch :click="onClick" />
         </div>
         <router-link to="/">
